@@ -10,7 +10,7 @@ module metaschool::calculator_l05
 
     public entry fun create_message(account: &signer) acquires Message {
         
-        let my_message = utf8(b"I am a Calculator dApp");
+        let my_message = utf8(b"I am a Calculator dApp. This is my first Dapp");
 
         if (exists<Message>(signer::address_of(account))){
             let message = borrow_global_mut<Message>(signer::address_of(account));
